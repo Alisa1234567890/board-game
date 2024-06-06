@@ -21,12 +21,4 @@ Si on repond un autre chose, la simulation redemarre.
 On fait la structure case avec l'information sur un arbre, la structure grille avec tout des arbres de grille et les autres information sur grille, on fait des procedures pour desinner le grille en fonction
 d'etat et pour desinner les nombre des arbres et pourcentage des arbres, ainsi que les fonctions et procedure pour calculer ces nombres. On fait la procedure de la simulation avec les boucles "for" et conditions "if".
 On fait main avec initialisation, simulation et les "draw" dans un boucle "while", ainsi que les calculs, affichage de courbe et fonctions de isKeyPressed( ).
-- Historique des evolutions
-1) 05.04.2024 J'ai fait les strutures, procedure d'initialisation, procedure draw, et commencee a faire procedure de simulation.
-2) 12.04.2024 J'ai fait une procedure pour calculer le facteur de propagation, des fonction pour calculer les cases verts, rouges et noirs. J'ai fini une procedure de simulation:
-j'ai ajoute un cas d'arret et calculs de facteur de propagation p1. J'ai ajoute le fonctionnement pour que la simulation s'arrete et redemarre si on appui sur les touches fleche bas et fleche haut.
-J'ai ajoute une procedure mousePos(x,y) pour pouvoir passer la souris dessus pour faire apparaître un feu.
-3) 19.04.2024 J'ai ajoute des courbes, la procedure pour calculer le pourcentage des cases noirs, rouges et verts. L'affichage des valeur de quantite des cases et de pourcentages des cases correspondants sur la grille.
-J'ai ajoute la condition pour que la valeur p1 reste constante ou varie si on appui sur les touches fleche droit et fleche gauche. J'ai ajoute les procedures pour afficher la griile et les valeurs de vraisemblance p1.
-J'ai ajoute le fonctionnement pour les faire afficher si on appui sur fleche bas ou fleche haut. J'ai ajoute la condition pour que la simulation commence apres 3 sedcondes a partir du demarrage du programme.
-J'ai ajoute une umage de foret. J'ai ajoute une procedure d'interpolation des couleurs pour affichage "vraisemblance p1".
+
