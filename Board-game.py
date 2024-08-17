@@ -3,6 +3,7 @@ from datetime import time
 from tkinter import *
 import time
 
+
 cl=False
 
 
@@ -231,16 +232,21 @@ def init():
 def click(e):
     global cl
     cl=True
+    print(cl)
 
 def callback(e):
+    global cl
     #m = -1
     #n = -1
     size=50
     a=e.x
     b=e.y
-    root.bind('<1>', click)
-    root.update()
-    global cl
+    #root.bind('<1>', click)
+
+    #root.update()
+
+
+
     #for i in range(10):
         #for j in range(10):
 
@@ -250,19 +256,22 @@ def callback(e):
 
                 #cl=False
                 #print(n,m)
-    for i in range(10):
-        for j in range(10):
-            if a>j*size and b>i*size and a<j*size+size and b<i*size+size and cl==True:
+    if cl == False:
+
+        for i in range(10):
+            for j in range(10):
+                if a > j * size and b > i * size and a < j * size + size and b < i * size + size:
                 #m=j
                 #n=i
-                if tab[i][j] == 1:
-                    tab[i][j]=8
-                elif tab[i][j]==2 or tab[i][j]==3 or tab[i][j]==4 or tab[i][j]==5 :
-                    tab[i][j]=8
-                elif tab[i][j]==0:
-                    tab[i][j]=9
+                    if tab[i][j] == 1:
+                        tab[i][j]=8
+                    elif tab[i][j]==2 or tab[i][j]==3 or tab[i][j]==4 or tab[i][j]==5 :
+                        tab[i][j]=8
+                    elif tab[i][j]==0:
+                        tab[i][j]=9
 
-                cl=False
+                    cl=False
+
             #if i==n and j==m:
                 #if tab[i][j] == 1:
                     #tab[i][j]=8
@@ -341,16 +350,18 @@ while True:
     #S_Canvas.delete("all")
 
     #root.bind('<1>', click)
-
-    root.bind('<Motion>', callback)
-    root.update()
     draw(tab)
+    root.bind('<1>', callback)
+    root.update()
+
     if stop(tab) == True:
         for i in range(10):
             for j in range(10):
                 if tab[i][j] == 0:
                     tab[i][j] = 9
-        time.sleep(3)
+        draw(tab)
+        #time.sleep(3)
+        
         tab = init()
 
     #root.update()
@@ -370,6 +381,7 @@ while True:
 
 
 root.mainloop()
+
 
 
 
